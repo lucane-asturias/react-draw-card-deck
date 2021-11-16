@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./Card.css";
 
 class Card extends Component {
 	constructor(props) {
@@ -7,14 +8,16 @@ class Card extends Component {
 		let xPos = Math.floor(Math.random() * 40 - 20);
 		let yPos = Math.floor(Math.random() * 40 - 20);
 		let angle = Math.floor(Math.random() * 90 - 45);
-		let _transform = `transform(${xPos}px, ${yPos}px) rotate(${angle}deg)`;
+		this._transform = `translate(${xPos}px, ${yPos}px) rotate(${angle}deg)`;
 	}
 	render() {
 		return (
 			<img 
 				style={{ transform: this._transform }} 
-				className="Card" src=
-				{this.props.image} alt={this.props.name} />
+				className="Card" 
+				src={this.props.image} 
+				alt={this.props.name} 
+			/>
 		)
 	}
 }
