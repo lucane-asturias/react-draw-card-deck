@@ -69,7 +69,7 @@ class Deck extends Component {
                     <span className="Deck-diamond">♦</span>
                 </h2>
                 <button className="Deck-btn" onClick={this.getCard}>Get Card!</button>
-                
+                <button className="Deck-btn cardreset" onClick={this.cardReset}>Reset</button>
                 <h4 className="Deck-remaincards">Cards Remaining: {this.state.remainCards}</h4>
                 <div className="Deck-cardarea">{cards}</div>
             </div>
